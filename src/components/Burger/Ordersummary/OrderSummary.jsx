@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
+import Button from "../../UI/Button/Button"
 
-
-const OrderSummary =  () => {
+const OrderSummary =  (props) => {
     return(
         <React.Fragment>
         <div>
@@ -13,6 +13,9 @@ const OrderSummary =  () => {
                 <li>Bacon:</li>
                 <li>Salad:</li>
             </ul>
+            <p>continue to checkout </p>
+            <Button clicked = {props.cancelHandler}>Cancel</Button>
+            <Button clicked = {props.continueHandler}>Continu</Button>
         </div>
         </React.Fragment>
     )

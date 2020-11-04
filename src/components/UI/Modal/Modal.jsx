@@ -8,7 +8,7 @@ const Modal = (props) => {
         opacity: props.show ? "1": "0", backgroundColor:"white"
     }}>
         {props.children}
-        <h1>hi</h1>
+    
     </div>
     return (
         <React.Fragment >
