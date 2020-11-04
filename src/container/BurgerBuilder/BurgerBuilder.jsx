@@ -69,9 +69,9 @@ class BurgerBuilder extends Component{
             
         return (
             <React.Fragment>
-            { this.state.purchasable ? <Modal>
+          <Modal show = {this.state.purchasable}>
            <OrderSummary/>
-            </Modal> : null}
+            </Modal>
             <Burger ingredients = {this.state.ingredients}/>
             <BuildControl 
                 ingredientAdded = {this.addIngredientHandler}
