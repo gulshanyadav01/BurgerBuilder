@@ -1,0 +1,31 @@
+.BuildControl{
+    width:100%;
+    background: #cf8f2e;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px red;
+    
+
+}
+.button1{
+    padding: 14px 16px;
+    background: pink;
+    border:none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px -8px rgba(0,0,0,0.1);
+    color: red;
+    font-weight: bold;
+    font-weight: 800;
+}
+
+.button1:hover{
+    background: green;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 3px 5px -8px rgba(0,0,0,0.1);
+    transform: scale(1.2);
+
+}
+
