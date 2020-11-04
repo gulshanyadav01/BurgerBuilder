@@ -22,7 +22,8 @@ class BurgerBuilder extends Component{
             bacon: 0
         },
         totalPrice: 4,
-        purchasable: false
+        purchasable: false,
+        openSideDrawer: false
     }
 
     addIngredientHandler = (type) => { 
@@ -70,6 +71,10 @@ class BurgerBuilder extends Component{
 
     purchaseContinueHandler = () => { 
         alert("you can continue");
+    }
+
+    openSideDrawerHandler = () => { 
+        this.setState({openSideDrawer: true})
     }
 
 

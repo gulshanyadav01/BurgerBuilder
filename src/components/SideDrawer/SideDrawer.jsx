@@ -8,11 +8,14 @@ import "./SideDrawer.css"
 const SideDrawer = (props) => {
     // .. do something 
     return (
-        <div className = "SideDrawer">
+        <div>
+       {props.show ?  <div className = "SideDrawer">
         <Logo />
         <nav>
             <NavigationItems />
         </nav>
+        </div>:null
+        }
         </div>
     );
 }
