@@ -1,5 +1,6 @@
 import React from "react"
-import Logo from "../../Logo/Logo"
+import Logo from "../Logo/Logo"
+import NavigationItems from "../Navigation/NavigationItems/NavigationItems"
 
 import "./Toolbar.css"
 const Toolbar = (props) => (
@@ -8,10 +9,7 @@ const Toolbar = (props) => (
         <div><Logo /></div>
 
         <nav>
-           <div class = "navigation">
-               <div>hello</div>
-               <div>about</div>
-           </div>
+           <NavigationItems/>
         </nav>
     </header>
 )

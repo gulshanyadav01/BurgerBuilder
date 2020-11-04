@@ -1,0 +1,15 @@
+.NavigationItem { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* list-style-type: none; */
+    text-decoration: none;
+    
+}
+.NavigationItem a {
+   
+    padding: 10px 16px; 
+    color: white; 
+    background: yellow;
+
+}
