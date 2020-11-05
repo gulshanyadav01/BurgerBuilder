@@ -8,9 +8,10 @@ const Layout = (props) => {
     const [showSideDrawer, setShowSideDrawer] = useState(false);
 
    const  openSideDrawerHandler = () => { 
-        // setSideDrawer(true); 
+        setSideDrawer(true); 
         setShowSideDrawer(true);
     }
+    
 
 //    const showSideDrawerHandler = () => { 
 
