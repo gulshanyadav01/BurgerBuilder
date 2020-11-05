@@ -5,8 +5,7 @@ import "./NavigationItems.css"
 const NavigationItems = () => (
     <ul className = "NavigationItems">
         <NavigationItem link = "/">BurgerBuilder</NavigationItem>
-        <NavigationItem link = "/">contact</NavigationItem>
-        <NavigationItem link = "/">contact</NavigationItem>
+        <NavigationItem link = "/checkout">Checkout </NavigationItem>
         
     </ul>
 )
