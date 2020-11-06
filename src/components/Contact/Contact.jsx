@@ -8,10 +8,14 @@ class Contact extends Component {
         address:"", 
         phone:"",
     }
+    formSubmitHandler  = () => { 
+
+    }
+
     render(){
         return (
             <div>
-                <form>
+                <form onSubmit = {}>
                     <input type = "text" name = "name" placeholder = "enter your name"/>
                     <input type = "text" name = "email" placeholder = "enter your email"/>
                     <input type = "text" name = "address" placeholder = "enter your address"/>
@@ -24,4 +28,4 @@ class Contact extends Component {
 
 }
 
-export default Contact; 
+export default Contac
