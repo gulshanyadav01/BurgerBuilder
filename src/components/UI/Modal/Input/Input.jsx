@@ -1,11 +1,13 @@
 import React from "react"
 
+import "./Input.css"
+
 const Input = (props) => { 
     let inputElement  = null; 
 
     switch (props.inputType) {
         case ("input"):
-            inputElement = <input {...props}/>
+            inputElement = <input {...props} className = "InputElement"/>
             break;
         case ("textarea"):
             inputElement = <input {...props}/>
@@ -16,8 +18,8 @@ const Input = (props) => {
     }
 
     return (
-        <div>
-            <label>{props.label}</label>
+        <div className = "Input">
+            <label className ="Label">{props.label}</label>
             {inputElement}
         </div>
 
