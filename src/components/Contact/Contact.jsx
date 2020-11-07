@@ -51,6 +51,11 @@ class Contact extends Component {
     }
 
     }
+    inputChangedHandler = (event) => { 
+        event.preventDefault(); 
+        console.log(event.target.value);
+
+    }
 
     render(){
         const formElementsArray = []; 
@@ -71,6 +76,7 @@ class Contact extends Component {
                                 elementType = {formElement.config.elementType}
                                 elementConfig = {formElement.config.elementConfig}
                                 value = {formElement.config.value}
+                                changed ={(event) => this.inputChangedHandler(event, idenfifier)}
                             />
                         ))
                     }
