@@ -4,26 +4,77 @@ import Input from "../../components/UI/Input/Input"
 import "./Contact.css"
 class Contact extends Component { 
     state = { 
-        name: "", 
-        email:"", 
-        address:"", 
-        phone:"",
+        orderForm:{
+            name:{
+                elementType:"input", 
+                elementConfig: {
+                    type: "text", 
+                    placeholder:" enter your name "
+                },
+                value: ""
+            }, 
+            email:{
+                elementType:"input", 
+                elementConfig: {
+                    type: "email", 
+                    placeholder:" enter your email "
+                },
+                value: ""
+        }
+        , 
+            address:{
+                street: {
+                    elementType:"input", 
+                    elementConfig: {
+                        type: "text", 
+                        placeholder:" street "
+                    },
+                    value: ""
+                }, 
+            postalCode: {
+                elementType:"input", 
+                elementConfig: {
+                    type: "text", 
+                    placeholder:" enter your Postal Code  "
+                },
+                value: ""
+            }
+        }, 
+            phone:{
+                elementType:"input", 
+                elementConfig: {
+                    type: "text", 
+                    placeholder:" enter your name "
+                },
+                value: ""
+        }
     }
-
-    orderHanlder  = (event) => { 
-        event.preventDefault(); 
-        console.log("")
 
     }
 
     render(){
+        const formElementsArray = []; 
+        for(let key in this.state.orderForm){
+            formElementsArray.push({
+                id: key,
+                config: this.state.orderForm[key]
+            })
+        }
         return (
             <div className ="Contact">
                 <form  >
-                    <Input inputtype = "input" type = "text" name = "name" placeholder = "enter your name"/><br/>
-                    <Input inputtype = "input" type = "text" name = "email" placeholder = "enter your email"/><br/>
-                    <Input inputtype = "input" type = "text" name = "address" placeholder = "enter your address"/><br/>
-                    <Input inputtype = "input" type = "text" name = "phone" placeholder = "enter your phone"/><br/>
+                    {/* <Input elementType = "..." elementConfig = "..." value = "..."/><br/> */}
+                    {
+                        formElementsArray.map((formElement) => (
+                            <Input 
+                                key = {formElement.id}
+                                elementType = {formElement.config.elementType}
+                                elementConfig = {formElement.config.elementConfig}
+                                value = {formElement.config.value}
+                            />
+                        ))
+                    }
+                   
                     <button type = "submit">submit</button>
                 </form>
             </div>
