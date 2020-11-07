@@ -8,6 +8,7 @@ import { Route } from "react-router-dom"
 import './App.css';
 import Checkout from './components/Checkout/Checkout';
 import { Switch } from 'react-router-dom';
+import Contact from "./components/Contact/Contact"
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <Switch>
         <Route path = "/" exact component = {BurgerBuilder} />
         <Route path = "/checkout" exact component = {Checkout}/>
+        <Route path = "/contact" exact component = {Contact}/>
         </Switch>
         </Layout>
       </div>

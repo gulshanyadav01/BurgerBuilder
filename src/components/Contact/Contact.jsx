@@ -1,6 +1,7 @@
-import React from "react"
+import React, { Component } from "react"
+import Input from "../../components/UI/Input/Input"
 
-
+import "./Contact.css"
 class Contact extends Component { 
     state = { 
         name: "", 
@@ -8,18 +9,21 @@ class Contact extends Component {
         address:"", 
         phone:"",
     }
-    formSubmitHandler  = () => { 
+
+    orderHanlder  = (event) => { 
+        event.preventDefault(); 
+        console.log("")
 
     }
 
     render(){
         return (
-            <div>
-                <form onSubmit = {}>
-                    <input type = "text" name = "name" placeholder = "enter your name"/>
-                    <input type = "text" name = "email" placeholder = "enter your email"/>
-                    <input type = "text" name = "address" placeholder = "enter your address"/>
-                    <input type = "text" name = "phone" placeholder = "enter your phone"/>
+            <div className ="Contact">
+                <form  >
+                    <Input inputtype = "input" type = "text" name = "name" placeholder = "enter your name"/><br/>
+                    <Input inputtype = "input" type = "text" name = "email" placeholder = "enter your email"/><br/>
+                    <Input inputtype = "input" type = "text" name = "address" placeholder = "enter your address"/><br/>
+                    <Input inputtype = "input" type = "text" name = "phone" placeholder = "enter your phone"/><br/>
                     <button type = "submit">submit</button>
                 </form>
             </div>

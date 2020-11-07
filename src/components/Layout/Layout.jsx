@@ -4,11 +4,11 @@ import Sidedrawer from "../SideDrawer/SideDrawer"
 
 import "./Layout.css"
 const Layout = (props) => {
-    const [sideDrawer, setSideDrawer] = useState(false);
+    // const [sideDrawer, setSideDrawer] = useState(false);
     const [showSideDrawer, setShowSideDrawer] = useState(false);
 
    const  openSideDrawerHandler = () => { 
-        setSideDrawer(true); 
+        // setSideDrawer(true); 
         setShowSideDrawer(true);
     }
     
